@@ -6,6 +6,7 @@ module Alexa
     class Client < ::OAuth2::AccessToken
 
       include Endpoints::SkillManagement
+      include Endpoints::InteractionModelManagement
 
       def initialize client_id, client_secret, refresh_token
 
