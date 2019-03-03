@@ -1,4 +1,10 @@
 require 'oauth2'
+require 'alexa/smapi/endpoints/skill_management'
+require 'alexa/smapi/endpoints/interaction_model_management'
+require 'alexa/smapi/endpoints/account_linking_management'
+require 'alexa/smapi/endpoints/beta_test_management'
+require 'alexa/smapi/endpoints/skill_validation'
+require 'alexa/smapi/endpoints/vendor_management'
 
 module Alexa
   module SMAPI
