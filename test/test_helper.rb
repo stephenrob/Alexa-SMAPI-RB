@@ -12,7 +12,7 @@ require 'vcr'
 require 'minitest/ci'
 
 if ENV["CIRCLECI"]
-  Minitest::Ci.report_dir = "#{ENV["CIRCLE_TEST_REPORTS"]}/reports"
+  Minitest::Ci.report_dir = "test/reports"
 end
 
 VCR.configure do |config|
