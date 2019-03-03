@@ -33,3 +33,7 @@ jobs:
       - run:
           name: Tests
           command: bundle exec rake test
+          when: always
+
+      - store_test_results:
+          path: test/reports
