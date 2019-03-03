@@ -9,6 +9,7 @@ module Alexa
       include Endpoints::InteractionModelManagement
       include Endpoints::AccountLinkingManagement
       include Endpoints::BetaTestManagement
+      include Endpoints::SkillValidation
 
       def initialize client_id, client_secret, refresh_token
 
