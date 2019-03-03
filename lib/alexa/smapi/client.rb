@@ -5,6 +5,8 @@ module Alexa
 
     class Client < ::OAuth2::AccessToken
 
+      include Endpoints::SkillManagement
+
       def initialize client_id, client_secret, refresh_token
 
         Faraday::Utils.default_params_encoder = Faraday::FlatParamsEncoder
