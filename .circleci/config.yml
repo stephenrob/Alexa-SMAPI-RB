@@ -32,4 +32,8 @@ jobs:
 
       - run:
           name: Tests
-          command: rake test
+          command: bundle exec rake test
+          when: always
+
+      - store_test_results:
+          path: test/reports
