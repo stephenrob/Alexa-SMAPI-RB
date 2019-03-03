@@ -37,3 +37,32 @@ jobs:
 
       - store_test_results:
           path: test/reports
+  deploy:
+    docker:
+      - image: circleci/ruby:2.5.3-node-browsers
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Setup Rubygems
+          command: bash .circleci/setup-rubygems.sh
+
+      - run:
+          name: Publish to Rubygems
+          command: |
+            gem build alexa-smapi.gemspec
+            gem push "alexa-smapi-$(git describe --tags).gem"
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
