@@ -33,7 +33,7 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     public_suffix (3.0.3)
-    rack (2.0.6)
+    rack (2.2.3)
     rake (10.5.0)
     safe_yaml (1.0.5)
     simplecov (0.16.1)
